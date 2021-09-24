@@ -1,50 +1,45 @@
 /*-----------------------------------------------*/
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background-image: url('img/38582.jpg');
-}
+/* Navbar font import*/
+@import url('https://fonts.googleapis.com/css2?family=Turret+Road:wght@300;500;800&display=swap');
+body {  
+  font-family: 'Turret Road', cursive;
+  /* background-image: url('img/38582.jpg'); */
+  }
 
 .topnav {
+  padding-left:20px; 
   overflow: hidden;
+  /* Вариант без и с задним фоном навбара */
   background-color: rgb(0, 0, 0);  
+  display: flex;
+  justify-content: space-evenly; 
 }
 
-.topnav a {
+.topnav a {    
   margin-top: 4px;
   margin-bottom: 4px;
-  margin-left: 40px;
-  margin-right:40px;
   float: left;
-  display: block;
+  display: flex;
   color: #f2f2f2;
-  text-align: center;
   padding: 14px 16px;
   text-decoration: none;
-  font-size: 18px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  
+  font-size: 20px;
+  font-family: 'Turret Road', cursive;
 }
-.box{
-  /* text-decoration: none; */
+.box{  
   color: #fff;
   background: transparent;
-  /* padding: 15px 40px; */
   border-radius: 5px;
-  /* font-weight: bold; */
-  /* text-transform: uppercase; */
   transition: all 0.3s ease-in-out;
-  border: 0 10px;  
+  border: 0 10px; 
 }
 .topnav a:hover {
-  /* background-color: #ddd;
-  color: black; */
   border: 0;
-  box-shadow: 0 0 3px #ffe205, 0 0 7px #ffe205, 0 0 20px #ffe205;
+  box-shadow: 0 0 3px #ffce44 , 0 0 7px #ffce44 , 0 0 20px #ffce44 ;
 }
 
 .topnav a.active {
-  background-color: #fcff55;
+  background-color: #ffce44 ;
   color: black;
 }
 
@@ -61,7 +56,11 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {position: relative; 
+    display: block;
+    justify-content: initial;
+  
+  }
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
@@ -71,7 +70,207 @@ body {
 .topnav.responsive a {
     float: none;
     display: block;
-    text-align: left;
+    text-align: center;
   }
 }
 /*-----------------------------------------------*/
+
+/*--------First section-----------------------*/
+.showcase {
+  position: relative;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgb(0, 0, 0);
+  color: #fff;
+  z-index: 2;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.5)
+  );
+  /* Функция чтобы текст сливался с бэком */
+  mix-blend-mode: normal;  
+}
+
+.text {
+  padding-top: 320px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  
+}
+.text h2 {
+  margin: 0;
+  font-size: 3em;
+  color: #ffffff;
+  opacity: 0.9;
+  
+}
+
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #ffce44;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #111;
+  letter-spacing: 2px;
+  transition: 0.2s;
+  border-radius: 12px;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+/*-------------------End of first section----------------------------*/
+
+/*--------------------- Second section------------------------------- */
+.bg {
+  /* background-image: url("img/123.jpg");      
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+
+  background-color: rgb(31, 31, 31);
+  color: #fff;
+  height: 935px;  
+  justify-content: center;
+  padding-top: 0px;
+  position: relative;
+  display: flex;
+}
+
+.text2 
+{  
+  position: relative;
+  z-index: 10;
+  /* padding-left: 150px;
+  padding-top: 290px; */
+  text-align: center;
+}
+
+.text2 a {
+  border-radius: 4px;
+  background-color: #5B7700   ;
+  border: none;
+  color: #000000;
+  text-align: center;
+  font-size: 20px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.text2 a span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.text2 a span:after {  
+  content: '\21E2';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.text2 a:hover span {
+  padding-right: 25px;
+}
+
+.text2 a:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+/* -------End of second section---------- */
+
+
+/*--------------------- Third section------------------------------- */
+.button3 {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button3 {
+  background-color: #ffce44; 
+  color: black; 
+  border-radius: 15%;
+  font-size: 23px;
+  font: bold;
+}
+
+.button3:hover {
+  background-color: #ffe77a;
+  color: rgb(0, 0, 0);
+}
+
+
+/*---------------------End of  third section------------------------------- */
+
+
+/* -----------code for carousel text----------------- */
+/* .carousel-caption {
+  position: absolute;
+  z-index: 1;
+  display:table;
+  width:100%;
+  height:100%;
+}
+
+.absolute-div {
+  position: absolute;
+    top: 310px;
+    left: 0;
+    right: 80px;
+    bottom: 0;
+}
+
+.carousel-caption h3 {
+  display:table-cell;
+  vertical-align: middle;
+  text-align:center;
+} */
+
+
+
