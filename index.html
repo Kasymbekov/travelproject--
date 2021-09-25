@@ -13,10 +13,9 @@
     <link rel='stylesheet' type='text/css' media='screen' href='css/carousel.css'>
     
     <style>
-  /* body, html {
-  height: 100%;
-  box-sizing: border-box;
-  } */
+  body, html {
+    scroll-behavior: smooth;
+  }
     
 
       </style>
@@ -24,10 +23,10 @@
   <body>
   <!-- Start of navbar -->
   <div class="topnav fixed-top" id="myTopnav" >
-    <a href="#home" class="active box" >Homepage</a>
-    <a href="#news" class="box">Destinations</a>
+    <a href="#first" class="active box" >Homepage</a>
+    <a href="#second" class="box">Destinations</a>
     <a href="#contact" class="box">Hotels</a>
-    <a href="#about" class="box">About</a>
+    <a href="#third" class="box">About</a>
     <a href="#about" class="box">Contacts</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
@@ -36,8 +35,11 @@
   <!-- End of navbar -->
 
   <!-- First section -->
-  <section class="showcase">
-    <video src="img/nature2.mp4" muted loop autoplay ></video>
+  <section class="showcase" id="first">
+    <!-- <video src="img/nature2.mp4" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" ></video> -->
+    <video playsinline="playsinline" autoplay="autoplay" muted="true" loop="loop">
+      <source src="img/nature2.mp4" type="video/mp4">
+  </video>
       <div class="overlay">
         <div class="text">
             <h2>Open your eyes to infinite beauty</h2><br>
@@ -51,14 +53,14 @@
   
 
   <!-- Second section -->
-  <div class="bg"> 
+  <div class="bg" id="second"> 
     <div class="container" style="max-width: max-content;">
     <div class="row align-items-center justify-content-center" style="height: 100%; background-color: rgb(24, 24, 24);">
       <div class="col-12 col-md-4" style="background-color: rgb(0, 0, 0); height: 470px; padding-top: 130px;">
       <br>
      <div class="text2" >
        <h1>Destinations</h1><br><br>
-       <a href="#third"><span>Explore more</span></a>
+       <a href="third"><span>Explore more</span></a>
      </div>
 
       <!-- Close div sm-4 -->
@@ -218,9 +220,24 @@ display: flex;">
 
 
 
+<!-- Show/Hide navbar on scroll down -->
+<script>
+  /*---------------------------------------*/
+  /*	NAVIGATION AND NAVIGATION VISIBLE ON SCROLL
+  /*---------------------------------------*/
+  window.onscroll = function() {
+  var currentScrollPos = window.pageYOffset;
 
-
-<!-- ----------------------------- -->  
+  // 20 is an arbitrary number here, just to make you think if you need the prevScrollpos variable:
+  if (currentScrollPos < 200) {
+    // I am using 'display' instead of 'top':
+    document.getElementById("myTopna").style.backgroundColor = "transparent";
+  } else {
+    document.getElementById("myTopna").style.backgroundColor = "rgb(0,0,0)";
+  }
+}
+ </script>
+<!-- ----------End of Show/Hide navbar------------------- -->  
   <!-- Responsive navbar function -->
   <script>
   function myFunction() {
@@ -233,31 +250,6 @@ display: flex;">
   }
   </script>
   <!-- ----------------------------- -->  
-
-  <!-- ------------Carousel----------------- -->  
-<!-- <script>
-  $('#carousel-example').on('slide.bs.carousel', function (e) {
-    
-    var $e = $(e.relatedTarget);
-    var idx = $e.index();
-    var itemsPerSlide = 8;
-    var totalItems = $('.carousel-item').length;
- 
-    if (idx >= totalItems-(itemsPerSlide-1)) {
-        var it = itemsPerSlide - (totalItems - idx);
-        for (var i=0; i<it; i++) {
-            // append slides to end
-            if (e.direction=="left") {
-                $('.carousel-item').eq(i).appendTo('.carousel-inner');
-            }
-            else {
-                $('.carousel-item').eq(0).appendTo('.carousel-inner');
-            }
-        }
-    }
-});
-</script> -->
-    <!-- ----------------------------- -->  
     <script src='js/scripts.js'></script>
 </body>
 </html>
