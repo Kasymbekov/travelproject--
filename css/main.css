@@ -7,7 +7,7 @@ body {
   }
 
 .topnav {
-  /* padding-left:20px;  */
+  padding-left:20px; 
   overflow: hidden;  
   display: flex;
   justify-content: space-evenly;   
@@ -456,7 +456,7 @@ body {
 
 #fourcardcontainer
 {
-  width: 400px;
+  /* width: 400px; */
   color: white;
 }
 
