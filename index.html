@@ -9,19 +9,14 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
   <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Begimbek</title>
+    <title>Travel project</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
     <link rel='stylesheet' type='text/css' media='screen' href='css/carousel.css'>
     <style>
   body, html {
     scroll-behavior: smooth;
-    /* position: relative; */
-    /* for scrollspy bootstrap */
-    /* position: relative; */
-    /* overflow-x: hidden; */
   }   
-
       </style>
   </head>
   <body>
@@ -62,8 +57,8 @@
       <div class="col-12 col-md-4" id="twocol1">
       <br>
      <div class="text2" >
-       <h1>Destinations</h1><br><br>
-       <a href="#"><span>Explore more</span></a>
+       <h1 id="textanimate">Destinations you will <br> see with us</h1>
+       <!-- <a href="#"><span>Scroll through</span></a> -->
      </div>
 
       <!-- Close div sm-4 -->
@@ -96,9 +91,9 @@
                     </div>
                 </div>
                 <!-- end carousel text -->
-               </div>              
+               </div>                     
               <div class="carousel-item col-12 col-sm-6 col-md-4 col-lg-4">
-                  <img src="img/123.jpg" class="img-fluid mx-auto d-block" alt="img3">
+                 <img src="img/123.jpg" id="myImg" class="img-fluid mx-auto d-block" alt="img3">
              <!-- carousel text -->
              <div class="absolute-div">
               <div class="carousel-caption">
@@ -207,11 +202,11 @@
       <img src="img/SQUARE.jpg" id="threeimgfluid" class="img-fluid">
     </div>
     <div class="col-12 col-lg-7" id="threecol2">
-      <h3 id="threeh3">There are over 88 major mountain ranges in Kyrgyzstan, most of them forming the Tian Shan - the Celestial Mountains. The others, such as the Chon Alai Range in the south of the country, belong to the Pamir Mountains.</h3>
+      <h3 id="threeh3">There are over 88 major mountain ranges in Kyrgyzstan, most of them forming the Tian Shan - the Celestial Mountains. The others, such as the Chon Alai Range in the south of the country, belong to the Pamir Mountains. Kyrgyzstan’s mountains effectively divide the country into a number of distinct regions.  </h3>
       <br>
-      <div class="text3" id="threetext3">
-        <button class="button3">More...</button>
-    </div>
+      <!-- <div class="text3" id="threetext3">
+        <button class="button3" >More...</button>
+    </div> -->
     </div>
   </div>
 </div>
@@ -333,16 +328,16 @@
         <div class="col-12 col-md-6" id="sevencols1" style="padding-bottom: 20px;
         " >
           <div class="col-md-11">
-            <input type="text" class="form-control" placeholder="Full name" style="font-size: 19px;background-color: black; color: white;">
+            <input type="text" class="form-control" id="textfield1" placeholder="Full name" style="font-size: 19px;background-color: black; color: white;">
           </div><br>
           <div class="col-md-11" >
-            <input type="text" class="form-control" placeholder="Email" style="font-size: 19px;background-color: black; color: white;">
+            <input type="text" class="form-control" id="textfield2" placeholder="Email" style="font-size: 19px;background-color: black; color: white;">
           </div><br>
           <div class="col-md-11">
-            <textarea type="text" class="form-control" placeholder="Message" rows="5" style="font-size: 19px;background-color: black; color: white;"></textarea>
+            <textarea type="text" class="form-control" id="textfield3" placeholder="Message" rows="5" style="font-size: 19px;background-color: black; color: white;"></textarea>
           </div><br>
           <div class="col-md-11">
-            <button type="button" class="btn btn-dark" style="float: right;color: white;">Send message  <i class="bi bi-arrow-right-square" style="margin-left: 6px;"></i></button>
+            <button type="button" class="btn btn-dark" onclick="ClearFields()" style="float: right;color: white;">Send message  <i class="bi bi-arrow-right-square" style="margin-left: 6px;"></i></button>
              </div>
           
         </div>
@@ -360,24 +355,6 @@
   <!-- Copyright -->
 </footer>
 
-<!-- Scrollspy function -->
-<!-- <script>
-  $(window).bind('scroll', function() {
-    var currentTop = $(window).scrollTop();
-    var elems = $('.scrollspy');
-    elems.each(function(index){
-      var elemTop 	= $(this).offset().top;
-      var elemBottom 	= elemTop + $(this).height();
-      if(currentTop >= elemTop && currentTop <= elemBottom){
-        var id 		= $(this).attr('id');
-        var navElem = $('a[href="#' + id+ '"]');
-    navElem.parent().addClass('active').siblings().removeClass( 'active' );
-      }
-    })
-});  -->
-
-  </script>
-  <!-- End of scrollspy -->
 
 <!-- Show/Hide navbar on scroll down -->
 <script>
@@ -410,6 +387,14 @@
   </script>
   <!-- ----------------------------- -->  
 
+  <!-- Clear textboxes -->
+  <script>
+    function ClearFields() {
+        document.getElementById("textfield1").value = "";
+        document.getElementById("textfield2").value = "";
+        document.getElementById("textfield3").value = "";
+    }
+  </script>
     <script src='js/scripts.js'></script>
 </body>
 </html>

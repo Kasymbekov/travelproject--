@@ -8,7 +8,7 @@ $('#carousel-example').on('slide.bs.carousel', function (e) {
     // var itemsPerSlide = 5;
     // var totalItems = $('.carousel-item').length;
     var totalItems = $('.carousel-item').length;
-    var itemsPerSlide = totalItems - 3;
+    var itemsPerSlide = totalItems - 1;
     if (idx >= totalItems-(itemsPerSlide-1)) {
         var it = itemsPerSlide - (totalItems - idx);
         for (var i=0; i<it; i++) {
