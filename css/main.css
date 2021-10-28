@@ -17,7 +17,7 @@ body {
   width: 100%;
   align-items: center;
   /* Вариант с задним фоном навбара */
-  /* background-color: rgb(0, 0, 0);   */
+  /* background-color: black;   */
 }
 
 .topnav a {    
@@ -66,12 +66,12 @@ body {
   .topnav.responsive 
   { 
     justify-content: initial;
-    background-color: rgb(0, 0, 0);
     padding-left:20px; 
     overflow: hidden;  
     display: block;
     position: fixed;
     z-index: 20;
+    /* background-color: black;  */
   }
   .topnav.responsive .icon 
   {
@@ -79,7 +79,7 @@ body {
     right: 0;
     top: 4px;
   }  
-.topnav.responsive a 
+  .topnav.responsive a 
  {
     float: none;
     display: block;
@@ -212,7 +212,10 @@ body {
 
 .img-fluid.mx-auto.d-block 
 {
-  min-height: 400px; border-radius: 15px;
+  /* min-height: 400px;  */
+  height: 400px; 
+  border-radius: 15px;
+  width: 300px;
 }
 
 .text2 
@@ -367,13 +370,13 @@ body {
     left: 0;
     right: 80px;
     bottom: 0;
-}
+} */
 
 .carousel-caption h3 {
-  display:table-cell;
-  vertical-align: middle;
-  text-align:center;
-} */
+  -webkit-text-stroke-width: 0.3px;
+  -webkit-text-stroke-color: #000;
+  text-shadow: white 0px 0px 10px;
+}
 
 /*---------------------Start of four section------------------------------- */
 #activetoursdiv
@@ -401,7 +404,7 @@ body {
 #activetours
 {
   padding-top:20px;
-  color: rgb(102, 0, 185); 
+  color: #ffce44; 
   font-weight: bold; 
   font-size: 50px;
   text-align: center;
@@ -427,7 +430,7 @@ body {
 
 #fourcols
 {
-  max-width: 430px; 
+  max-width: 400px; 
   padding-top: 25px;
   padding-bottom: 20px;
 }
@@ -435,11 +438,12 @@ body {
 #fourimgs
 {
   height: 500px;
+  /* width: auto; */
 }
 
 #fourcardcontainer
 {
-  /* width: 400px; */
+  
   color: white;
 }
 
@@ -458,7 +462,7 @@ body {
 
 .checked 
 {
-  color: yellow;
+  color: #ffce44;
 }
 
 .card {
